@@ -4,14 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tripvillas</title>
+    <title>Tripvillas | Book Vacations</title>
     <link rel="stylesheet" href="index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-
-  
   </head>
   <body>
     <div id="navbar">
@@ -25,50 +23,233 @@
 
       <div id="menu">
         <ul>
-          <li id="user"><i  class="fa-regular fa-user"></i></li>
+          <li id="user"><i class="fa-regular fa-user"></i></li>
           <li id="currency"><span>INR</span></li>
           <li id="hamberg"><i class="fa-solid fa-bars"></i></li>
         </ul>
       </div>
     </div>
-    
+
     <div id="userEntry">
       <p id="firstL">Login</p>
       <p id="secondL">Signup</p>
-       
     </div>
 
-          <form action="" id="login" class="loginform" >
-            <input id="email1" type="text" placeholder="Enter Your Email"> <br>
-            <input id="pass1" type="password" placeholder="Enter Your password"> <br>
-            <input type="Submit">
-          </form>                
-        
-            
-          <form action=""  id="signup" class="signupform">
-            <input id="emails2" type="text" placeholder="Enter Your Email"> <br>
-            <input id="mob" type="tel" placeholder="Enter Your Moble No"> <br>
-            <input id="name" type="text" placeholder="Enter Your Name">
-            <input id="pass2" type="password" placeholder="Enter Your password">
-            <input type="Submit">
-            
-          </form>  
-          
-          <div id="ham">
-            <a href="about.html">About Us</a>            
-            <a href=""> Privacy Policy</a>
-            <a href="">Terms Of Use</a>
-            <a href="faq.html">FAQs</a>
-            <a href="contact.html">Contact Us</a>
-            
-          </div>
-       
-    
-   <div style="width: 100%;">
-    <img  src="https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg" alt="" style="width: 100%;">
-   </div>
+    <form action="" id="login" class="loginform">
+      <input id="email1" type="text" placeholder="Enter Your Email" /> <br />
+      <input id="pass1" type="password" placeholder="Enter Your password" />
+      <br />
+      <input type="Submit" />
+    </form>
 
-    
+    <form action="" id="signup" class="signupform">
+      <input id="emails2" type="text" placeholder="Enter Your Email" /> <br />
+      <input id="mob" type="tel" placeholder="Enter Your Moble No" /> <br />
+      <input id="name" type="text" placeholder="Enter Your Name" />
+      <input id="pass2" type="password" placeholder="Enter Your password" />
+      <input type="Submit" />
+    </form>
+
+    <div id="ham">
+      <a href="about.html">About Us</a>
+      <a href=""> Privacy Policy</a>
+      <a href="">Terms Of Use</a>
+      <a href="faq.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <!-- ******************************************************************* -->
+    <section id="poster">
+      <img
+        src="https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg"
+        alt=""
+      />
+      <div>
+        <h1>Book Hotels Vacation Rentals</h1>
+        <h1>Top Holiday Homes - Villas, Apartments & Homestays</h1>
+        <form action="">
+          <!-- <a href="https://goo.gl/maps/GaTriM2sZVjKAp2h6"><input type="text"  placeholder="location"></a> -->
+          <input type="text" placeholder="Location" />
+
+          <!-- <input type="date" placeholder="Check-In"> -->
+
+          <input
+            type="text"
+            placeholder="Check-In"
+            onfocus="(this.type='date')"
+          />
+          <input
+            type="text"
+            placeholder="Check-Out"
+            onfocus="(this.type='date')"
+          />
+
+          <!-- <input type="date" placeholder="Check-Out"> -->
+          <select name="" id="">
+            <option value="Select Guest">Select Guest</option>
+            <option value="1 Guest">1 Guest</option>
+            <option value="2 Guest">2 Guest</option>
+            <option value="3 Guest">2 Guest</option>
+            <option value="3 Guest">3 Guest</option>
+            <option value="4 Guest">4 Guest</option>
+            <option value="5 Guest">5 Guest</option>
+            <option value="6 Guest">6 Guest</option>
+            <option value="7 Guest">7 Guest</option>
+            <option value="8 Guest">8 Guest</option>
+            <option value="9 Guest">9 Guest</option>
+          </select>
+
+          <input id="btn" type="text" value="Search" />
+        </form>
+      </div>
+    </section>
+    <!-- ******************************************************** -->
+    <div id="topDestination">
+      <h2>Top Destinations</h2>
+      <div id="destination"></div>
+      <!-- ***************************************************** -->
+      <button id="left"><i class="fa-solid fa-chevron-left"></i></button>
+      <button id="right"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- ************************************************ -->
+
+    <div id="main">
+      <div id="mainleft">
+        <h2>Fully Managed Communities By Tripvillas</h2>
+        <div id="item">
+          <div>
+            <img
+              src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/housekeeper.svg"
+              alt=""
+            />
+            <h4>High Quality housekeeping</h4>
+          </div>
+          <div>
+            <img
+              src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/towel.svg"
+              alt=""
+            />
+            <h4>Comfortable Linen and Toiletries</h4>
+          </div>
+          <div>
+            <img
+              src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/bed.svg"
+              alt=""
+            />
+            <h4>Quality Furniture & Fittings</h4>
+          </div>
+          <div>
+            <img
+              src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/dinner.svg"
+              alt=""
+            />
+            <h4>Food Delivery Or Central Restaurant</h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="mainright">
+        <div>
+          <h2>Tata Rio De Goa</h2>
+          <p>dabolim, Goa</p>
+        </div>
+        <div>
+          <h2>Kenisha Holiday Home</h2>
+          <p>Pawasalwadi, Maharastra</p>
+        </div>
+        <div>
+          <h2>White Villas Shahpur</h2>
+          <p>Shahpur, Maharastra</p>
+        </div>
+        <div>
+          <h2>White Villas Kasara</h2>
+          <p>Kasara, Maharastra</p>
+        </div>
+        <div>
+          <h2>Puravankara Adora De Goa</h2>
+          <p>Dabolim Goa</p>
+        </div>
+        <div>
+        <h2>  Umiya Serene</h2>
+        <p>Nerul, Goa</p>
+        </div>
+        <div>
+          <h2>Oasis Alibaug</h2>
+          <p>Alibag, Maharastra</p>
+        </div>
+        <div>
+          <h2>Dreamz Shiroda </h2>
+          <p>Shiroda, Maharastra</p>
+        </div>
+        <div>
+          <h2>Pristine Bay Mahabalipuram</h2>
+          <p>Thenpattinam , Tamilnadu</p>
+        </div>
+        <div>
+          <h2>Ampelon Chikkaballapur</h2>
+          <p>Chikkaballapur, Karnatka</p>
+        </div>
+      </div>
+    </div>
+    <!-- ***************************Holiday investment*********************** -->
+
+    <div id="investment">
+      <div id="holidayinvestment">
+        <h2>Holiday Home Investment Opportunities</h2>
+        <div>
+          <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/growth.svg" alt="">
+          <p>Low Cost High Appreciation</p>
+        </div>
+        <div>
+          <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/maids.svg" alt="">
+          <p>Professionally Managed</p>
+        </div>
+        <div>
+          <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/give-money.svg" alt="">
+          <p>Guaranteed To Produce Income</p>
+        </div>
+        <div>
+          <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/plan.svg" alt="">
+          <p>We Designed Floor Plans</p>
+        </div>
+        <button>EXPLORE INVESTMENT OPPORTUNITIES</button>
+      </div>
+
+<div id="holidayowner">
+  <h2>Are You A Holiday Home Owner/Manager?</h2>
+  <div>
+    <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/network.svg" alt="">
+    <p>Get Bookings From 100+ Websites
+    </p>
+  </div>
+  <div>
+    <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/layout.svg" alt="">
+    <p>One Dashboard - Total Control
+    </p>
+  </div>
+  <div>
+    <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/flash.svg" alt="">
+    <p>Instant Book Or Request To Book
+    </p>
+  </div>
+  <div>
+    <img src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/smartphone-call.svg" alt="">
+    <p>Both iOS & Android App Available.
+    </p>
+  </div>
+
+  <button>LIST YOUR PROPERTY</button>
+</div>
+
+
+    </div>
+
+
+
+
+
+
+
   </body>
 </html>
 <script src="index.js"></script>

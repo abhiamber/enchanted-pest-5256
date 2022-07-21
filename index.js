@@ -1,128 +1,253 @@
+let userArray = JSON.parse(localStorage.getItem("userDataOfSignup")) || [];
 
-let userArray=JSON.parse(localStorage.getItem("userDataOfSignup"))||[]
-  
-document.querySelector("#user").addEventListener("click",showUserEntry)
-document.querySelector("#firstL").addEventListener("click",showUserLogin)
-document.querySelector("#secondL").addEventListener("click",showUserSignup)
+document.querySelector("#user").addEventListener("click", showUserEntry);
+document.querySelector("#firstL").addEventListener("click", showUserLogin);
+document.querySelector("#secondL").addEventListener("click", showUserSignup);
 
-
-let flag=true
-function showUserEntry(){    
-  if(flag){
-    document.querySelector("#userEntry").style.display="block"
+let flag = true;
+function showUserEntry() {
+  if (flag) {
+    document.querySelector("#userEntry").style.display = "block";
     // console.log("yes")
-    flag=false
-  }else{
-    document.querySelector("#userEntry").style.display="none"
-    document.querySelector("#signup").style.display="none"
-    document.querySelector("#login").style.display="none"
-    // console.log("no")  
-    flag=true
+    flag = false;
+  } else {
+    document.querySelector("#userEntry").style.display = "none";
+    document.querySelector("#signup").style.display = "none";
+    document.querySelector("#login").style.display = "none";
+    // console.log("no")
+    flag = true;
   }
-
 }
 
-let flag1=true
-function showUserLogin(){
-  if(flag1){ 
-    flag1=false  
-    document.querySelector("#signup").style.display="none"
-    document.querySelector("#login").style.display="flex"
-    // console.log("log")      
-  }else{
-    flag1=true
-    document.querySelector("#login").style.display="none"
-//   console.log("nolog")   
+let flag1 = true;
+function showUserLogin() {
+  if (flag1) {
+    flag1 = false;
+    document.querySelector("#signup").style.display = "none";
+    document.querySelector("#login").style.display = "flex";
+    // console.log("log")
+  } else {
+    flag1 = true;
+    document.querySelector("#login").style.display = "none";
+    //   console.log("nolog")
   }
+}
 
-} 
-
-
-let flag2=true
-function showUserSignup(){
-  if(flag2){ 
-    flag2=false  
-    document.querySelector("#login").style.display="none"
-    document.querySelector("#signup").style.display="flex"   
-      }else{
-    document.querySelector("#signup").style.display="none"
+let flag2 = true;
+function showUserSignup() {
+  if (flag2) {
+    flag2 = false;
+    document.querySelector("#login").style.display = "none";
+    document.querySelector("#signup").style.display = "flex";
+  } else {
+    document.querySelector("#signup").style.display = "none";
     // console.log("hellzvsvdsvo")
-    flag2=true
+    flag2 = true;
   }
-
-} 
-
-
-document.querySelector(".signupform").addEventListener("submit",displaySignupForm)
-
-function displaySignupForm(e){
-e.preventDefault()
-if(
-    document.querySelector("#emails2").value==""||
-    document.querySelector("#mob").value==""  ||
-    document.querySelector("#name").value==""  ||
-    document.querySelector("#pass2").value==""
-){
-    alert("Please fill all required input")
-} else{
-let obj={
-    emailsignup:document.querySelector("#emails2").value,
-    mobile:document.querySelector("#mob").value,
-    names:document.querySelector("#name").value,
-    passwordsignup:document.querySelector("#pass2").value
-}
-alert("Signup sucessful")
-userArray.push(obj)
-}
-localStorage.setItem("userDataOfSignup",JSON.stringify(userArray))
-
 }
 
+document
+  .querySelector(".signupform")
+  .addEventListener("submit", displaySignupForm);
 
-document.querySelector(".loginform").addEventListener("submit",displayLoginForm)
-
-function displayLoginForm(e){
-  
-e.preventDefault()
-let flag=false
-console.log(userArray)
-userArray.map(function(elem){
-if(elem.passwordsignup==document.querySelector("#pass1").value && elem.emailsignup==document.querySelector("#email1").value){
-  flag=true 
+function displaySignupForm(e) {
+  e.preventDefault();
+  if (
+    document.querySelector("#emails2").value == "" ||
+    document.querySelector("#mob").value == "" ||
+    document.querySelector("#name").value == "" ||
+    document.querySelector("#pass2").value == ""
+  ) {
+    alert("Please fill all required input");
+  } else {
+    let obj = {
+      emailsignup: document.querySelector("#emails2").value,
+      mobile: document.querySelector("#mob").value,
+      names: document.querySelector("#name").value,
+      passwordsignup: document.querySelector("#pass2").value,
+    };
+    alert("Signup sucessful");
+    userArray.push(obj);
+  }
+  localStorage.setItem("userDataOfSignup", JSON.stringify(userArray));
 }
-})
 
-if(flag){
-  alert("sucessful")
-}else{
-  alert("TryAgain")
+document
+  .querySelector(".loginform")
+  .addEventListener("submit", displayLoginForm);
+
+function displayLoginForm(e) {
+  e.preventDefault();
+  let flag = false;
+  console.log(userArray);
+  userArray.map(function (elem) {
+    if (
+      elem.passwordsignup == document.querySelector("#pass1").value &&
+      elem.emailsignup == document.querySelector("#email1").value
+    ) {
+      flag = true;
+    }
+  });
+
+  if (flag) {
+    alert("sucessful");
+  } else {
+    alert("TryAgain");
+  }
 }
 
-}
+document.querySelector("#hamberg").addEventListener("click", hambergSection);
 
-
-
-document.querySelector("#hamberg").addEventListener("click",hambergSection)
-
-let flag3=true
-function hambergSection(){
+let flag3 = true;
+function hambergSection() {
   // console.log("hello")
-  if(flag3){ 
-    flag3=false  
-    document.querySelector("#ham").style.display="block"   
-      }else{
-    document.querySelector("#ham").style.display="none"
-    flag3=true
+  if (flag3) {
+    flag3 = false;
+    document.querySelector("#ham").style.display = "block";
+  } else {
+    document.querySelector("#ham").style.display = "none";
+    flag3 = true;
   }
-
-
 }
 
+let topDestinations = [
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/goa-11.f1c86735cec4.jpg",
+    place: "Goa",
+    vac: "Vacation Rentals",
+  },
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/galle-27739.4e9874b7f375.jpg",
+    place: "Galle",
+    vac: "Vacation Rentals",
+  },
 
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/phuket-72.9d6f9e3883be.jpg",
+    place: "Phuket",
+    vac: "Vacation Rentals",
+  },
 
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/kandy-5144.2adb0839ea6a.jpg",
+    place: "Koh Samui",
+    vac: "Vacation Rentals",
+  },
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/lonavala-2293.ab3b797cddf6.jpg",
+    place: "Lonavala",
+    vac: "Vacation Rentals",
+  },
 
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/kerala-18.c082ce41a521.jpg",
+    place: "Kerala",
+    vac: "Vacation Rentals",
+  },
 
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/pattaya-103.efcc9f2f0593.jpg",
+    place: "Pattaya",
+    vac: "Vacation Rentals",
+  },
 
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/pattaya-103.efcc9f2f0593.jpg",
+    place: "Himachal Pradesh",
+    vac: "Vacation Rentals",
+  },
 
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/pattaya-103.efcc9f2f0593.jpg",
+    place: "Alibag",
+    vac: "Vacation Rentals",
+  },
 
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/coorg-5464.83497c6367a3.jpg",
+    place: "Corogp",
+    vac: "Vacation Rentals",
+  },
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/paris-12904.935a27918023.jpg",
+    place: "Paris",
+    vac: "Vacation Rentals",
+  },
 
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/cape-town-18738.a03fe431b7f0.jpg",
+    place: "Cap Town",
+    vac: "Vacation Rentals",
+  },
+
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/barcelona-13765.0b9dcf0cb99c.jpg",
+    place: "Barcelona",
+    vac: "Vacation Rentals",
+  },
+
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/sydney-12057.f0b028083eef.jpg",
+    place: "Sydney",
+    vac: "Vacation Rentals",
+  },
+
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/orlando-5996.b0bf66cecab5.jpg",
+    place: "Orlando",
+    vac: "Vacation Rentals",
+  },
+
+  {
+    src: "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/rome-12009.602b199321a4.jpg",
+    place: "Rome",
+    vac: "Vacation Rentals",
+  },
+];
+
+document.querySelector("#left").addEventListener("click", leftSliding);
+document.querySelector("#right").addEventListener("click", rightSliding);
+// let count=0
+let start = 0;
+let last = 4;
+display(start, last);
+
+function leftSliding() {
+  if (start >= 1 && last >= 5) {
+    start--;
+    last--;
+    display(start, last);
+  }
+}
+
+function rightSliding() {
+  if (last < topDestinations.length - 1) {
+    start++;
+    last++;
+    display(start, last);
+  } else {
+    start = 0;
+    last = 4;
+    display(start, last);
+  }
+}
+
+function display(start, last) {
+  document.querySelector("#destination").innerHTML = "";
+  console.log("hello");
+  // let start=0
+  // let last=4
+  for (start; start <= last; start++) {
+    let div = document.createElement("div");
+    let image=document.createElement("img")
+  image.src= topDestinations[start].src;
+
+    let h2 = document.createElement("h2");
+    h2.innerText = topDestinations[start].place;
+    let p = document.createElement("p");
+    p.innerText = topDestinations[start].vac;
+    div.append(image,h2, p);
+  
+    document.querySelector("#destination").appendChild(div);
+  }
+}
