@@ -241,6 +241,7 @@ function display(start, last) {
     let div = document.createElement("div");
     let image=document.createElement("img")
   image.src= topDestinations[start].src;
+  // div.style.backgroundColor="red"
 
     let h2 = document.createElement("h2");
     h2.innerText = topDestinations[start].place;
@@ -251,3 +252,67 @@ function display(start, last) {
     document.querySelector("#destination").appendChild(div);
   }
 }
+
+
+// ************************************************
+
+let vacationArray=[
+  {link:"https://d2vcelvjdj7n25.cloudfront.net/media/collection/phuket.jpg",place:"Phukets Best Pool Villas"},
+  {link:"https://d2vcelvjdj7n25.cloudfront.net/media/collection/vindhyas-homestay.jpg",place:"Coorg Homestays"},
+  {link:"https://d2vcelvjdj7n25.cloudfront.net/media/collection/lonavala.jpg",place:"Family Bungalows in Lonavala"},
+  {link:"https://d2vcelvjdj7n25.cloudfront.net/media/collection/beautiful-Bali-Gazebo_1.jpg",place:"Bali Family Villas"},
+  {link:"https://d2vcelvjdj7n25.cloudfront.net/media/collection/sri_lanka.jpg",place:"Sri Lanka - Rural solitude and luxury combined"},
+  {link:"https://d2vcelvjdj7n25.cloudfront.net/media/collection/Louvre_Museum_Wikimedia_Commons.jpg",place:"Apartments near the Louvre in Paris"},
+  {link:"https://d2vcelvjdj7n25.cloudfront.net/media/collection/planters-bungalow.PNG",place:"Cheap & Affordable Homestays & Resorts in Sakleshpur"},
+  {link:"https://d2vcelvjdj7n25.cloudfront.net/media/collection/goaluxury_272x204.jpg",place:"Luxury Vacation in Goa"},
+  {link:"https://d2vcelvjdj7n25.cloudfront.net/media/collection/dsc_1386.JPG",place:"Top Homestays and resorts in Chikmagalur"},
+  {link:"https://d2vcelvjdj7n25.cloudfront.net/media/collection/slide-13.jpg",place:"Escape to the Nilgiris - Homestays, Resorts, Cottages in Coonoor"}
+]
+
+
+document.querySelector("#leftvac").addEventListener("click", leftSlidingvac);
+document.querySelector("#rightvac").addEventListener("click", rightSlidingvac);
+// let count=0
+let start2 = 0;
+let last2 = 4;
+displayVacation(start2, last2);
+
+function leftSlidingvac() {
+  if (start2 >= 1 && last2 >= 5) {
+    start2--;
+    last2--;
+    displayVacation(start2, last2);
+  }
+}
+
+function rightSlidingvac() {
+  if (last2 < vacationArray.length - 1) {
+    start2++;
+    last2++;
+    displayVacation(start2, last2);
+  } else {
+    start2 = 0;
+    last2 = 4;
+    displayVacation(start2, last2);
+  }
+}
+
+function displayVacation(start2, last2) {
+  document.querySelector("#Vacation").innerHTML = "";
+
+  for (start2; start2 <= last2; start2++) {
+    let div = document.createElement("div");
+    let image=document.createElement("img")
+  image.src= vacationArray[start2].link;
+
+
+    let h2 = document.createElement("h2");
+    h2.innerText = vacationArray[start2].place;
+    // let p = document.createElement("p");
+    // p.innerText = topDestinations[start].vac;
+    div.append(image,h2);
+  
+    document.querySelector("#Vacation").appendChild(div);
+  }
+}
+

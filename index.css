@@ -198,6 +198,7 @@ position: relative;
   height: auto;
   display: flex;
   gap: 15px;
+  margin-bottom: 60px;
 
 }
 #destination>div{
@@ -208,13 +209,14 @@ position: relative;
   text-align: center;
   /* color: white; */
   position: relative;
+  cursor: pointer;
 }
 
 #destination>div>h2{
  /* margin-bottom: 8px; */
   position: absolute;
   top: 50px;
-  left: 60px;
+  left: 50px;
   text-align: center;
   color: white;
   /* margin: auto; */
@@ -223,8 +225,8 @@ position: relative;
 #destination>div>p{
 
   position: absolute;
-  top: 90px;
-  left: 45px;
+  top: 80px;
+  left: 40px;
   color: white;
   /* margin: auto; */
 
@@ -260,17 +262,19 @@ position: relative;
 }
 
 #main{
-  width: 100%;
+  width:90%;
   margin: auto;
   height: auto;
-  margin: 70px 0;
+  /* margin: 70px 0; */
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 57px;
 }
 #mainleft{
-  width: 25%;
-  height: auto;
-  margin: auto; 
+  width: 30%;
+ height: 350px;
+  /* margin: auto;  */
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   text-align: center;
@@ -278,8 +282,10 @@ margin-top: 0px;
   color: rgb(107, 105, 105);
 
 }
-#mainleft>h2{
+#mainleft>h2,#mainrigh>h2
+  {
   margin: 25px 0;
+  color: rgb(148, 147, 147);
 }
 #item{
   display: grid;
@@ -297,15 +303,15 @@ margin-top: 0px;
 }
 
 #mainright{
-  width: 57%;
+  width: 63%;
   height: auto;
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(3,160px);
 /* padding-left: -1px; */
   gap: 40px;
-  margin: auto;
-  margin-left: -27px;
+  /* margin: auto; */
+  /* margin-left: -27px; */
 
  
 
@@ -369,35 +375,181 @@ margin-top: 0px;
   box-sizing: border-box;
 }
 
+
+
+
+
 #investment{
-  width: 100%;
+  width: 90%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
+  margin: auto;
+  margin-bottom: 60px;
+
+}
+#holidayowner>h2,#holidayinvestment>h2{
+  text-align: center;
+}
+#holidayowner,#holidayinvestment{
+  width: 50%;
+  height: auto;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* border: 2px solid green; */
+  padding: 40px 0;
 
 }
 
-#holidayinvestment{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 43%;
-  height: 300px;
+#homeinvestmentimage,#holiownerimage{  
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  grid-template-rows: repeat(1,50px);
-  justify-content: space-between;
+  grid-template-rows: repeat(1,1fr);
+  justify-content: space-around;
+  padding: 40px 20px;
+  /* gap: 10px; */
+  text-align: center;
 }
-button{
-  display: block;
-  /* width: 100px; */
+
+#holidayowner>button,#holidayinvestment>button{
+   display: flex;
+   margin: auto;
+   justify-content: center;
+   align-items: center;
+   color: rgb(248, 241, 241);
+   background-color: rgb(71, 132, 245);
+   border: 0px;
+   padding: 15px;
+   cursor: pointer;
+
 }
-#holidayinvestment>div>img{
-width: 40%;
+
+#homeinvestmentimage>div>img,#holiownerimage>div>img{
+width:30%;
 }
-#holidayinvestment>div{
-  width: 20%;
-}
+
+
+#Vacationideas{
+  width: 100%;
+  height: auto;
+  position: relative;
+  }
+  
+  #Vacationideas>h2{
+    color: rgb(61, 59, 59);
+    margin: 30px 0 20px 70px;
+  }
+  #Vacationideas>h3{
+    color: rgb(61, 59, 59);
+    margin: 20px 0 0 60px;
+    color: blue;
+  }
+  
+  #Vacation{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    gap: 15px;
+    /* margin-bottom: 60px; */
+  
+  }
+  #Vacation>div{
+    /* background-color: rgba(34,34,34,.6); */
+   margin: auto;
+    width: 18%;
+    height: 200px;
+    text-align: center;
+       position: relative;
+       cursor: pointer;
+  }
+  
+  #Vacation>div>h2{
+     position: absolute;
+    top: 40px;
+    left: 10px;
+    text-align: center;
+    color: white;
+
+ 
+    
+  }
+  
+  #Vacation>div>img{
+    width: 100%;
+    height: 200px;
+  }
+  
+  
+  #leftvac{
+    position: absolute;
+    font-size: 35px;
+    top: 130px;
+    left: 15px;
+    border: 0px;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(112, 110, 110);
+  }
+  #rightvac{
+    color: rgb(112, 110, 110);
+    position: absolute;
+    font-size: 35px;
+    top: 130px;
+    right: 25px;
+    border: 0px;
+    background-color: white;
+    cursor: pointer;
+  }
+  #leftvac:hover,#rightvac:hover{
+    color: rgb(46, 46, 46);
+  }
+  
+
+  #globalholiday{
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+    height: auto;
+    }
+    #globalholiday>h2{
+      color: rgb(126, 122, 122);
+    }
+    #globalholiday>ul{
+      display: flex;
+      margin: 20px auto 10px;
+      text-decoration: none;
+    }
+    #globalholiday>ul>li,#globalholiday>ul>li>a{
+      list-style: none;
+      text-decoration: none;
+      /* margin: 0 10px; */
+      margin-right: 10px;
+      color: rgb(126, 122, 122);
+
+    }
+
+    #globalcountry{
+      margin: 30px auto 70px;
+      height: auto;
+      display: flex;
+      justify-content: space-around;
+      gap: 15px;
+      }
+
+    #globalcountry>div{
+      width: 18%;
+          color: rgb(126, 122, 122);
+    }
+    #globalcountry>div>h4{
+      margin-top: 10px;
+      color: rgb(82, 80, 80);
+    }
+
+
+
 
 
 
@@ -414,10 +566,4 @@ width: 40%;
 
 
   
-#holidayowner{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 43%;
-}
-#holidayowner>div>img{
-width: 10%;
-}
+
