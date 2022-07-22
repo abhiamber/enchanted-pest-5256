@@ -239,6 +239,9 @@ function display(start, last) {
   // let last=4
   for (start; start <= last; start++) {
     let div = document.createElement("div");
+    div.addEventListener("click",function(){
+      window.location.href="Booking.html"
+     })
     let image=document.createElement("img")
   image.src= topDestinations[start].src;
   // div.style.backgroundColor="red"
@@ -308,11 +311,14 @@ function displayVacation(start2, last2) {
 
     let h2 = document.createElement("h2");
     h2.innerText = vacationArray[start2].place;
-    // let p = document.createElement("p");
-    // p.innerText = topDestinations[start].vac;
+   div.addEventListener("click",function(){
+    window.location.href="Booking.html"
+   })
     div.append(image,h2);
   
     document.querySelector("#Vacation").appendChild(div);
   }
 }
+
+
 

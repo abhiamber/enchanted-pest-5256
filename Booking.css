@@ -1,0 +1,49 @@
+#bookingcontainer{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+  
+    margin-bottom: 50px;
+
+}
+#bookingcontainer>p{
+    margin: 50px 0 20px 0;
+    font-size: 30px;
+}
+#bookingcontainer>form>input{
+    display: block;
+    margin: auto;
+    width: 40%;
+    height: 30px;
+    margin-bottom: 20px;
+  
+}
+#bookingcontainer>form>p{
+    /* margin-top: 20px; */
+      font-size: 20px;
+}
+
+#spans{
+    /* margin-bottom: 30px; */
+    font-size: 30px;
+    cursor: pointer;
+    background-color: brown;
+}
+#bookingcontainer>form>input:nth-child(8){
+    border: 0px;
+    color: white;
+background-color: rgb(88, 88, 218);
+height: 45px;
+cursor: pointer;
+font-size: 20px;
+/* margin-top: 15px; */
+}
+#bookingcontainer>form>input:nth-child(8):hover{
+    background-color: blue;
+    color: aqua;
+}
+
+#totalAmount{
+    font-size: 40px;
+    color: rgb(38, 43, 48);
+}
