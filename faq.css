@@ -41,6 +41,7 @@
     color:whitesmoke;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   footer>div{
     width: 18%;

@@ -134,13 +134,11 @@ display: none;
 }
 #poster>img{
   width: 100%;
-  height: 73vh;
- 
+  height: 73vh; 
 }
 #poster>div{
   width: 70%;
-  /* text-align: center; */
-  margin: auto;
+    margin: auto;
   position: absolute;
   top: 225px;
   left: 200px;
@@ -202,7 +200,6 @@ position: relative;
 
 }
 #destination>div{
-  /* background-color: rgba(34,34,34,.6); */
  margin: auto;
   width: 18%;
   height: 200px;
@@ -223,7 +220,6 @@ position: relative;
   
 }
 #destination>div>p{
-
   position: absolute;
   top: 80px;
   left: 40px;
@@ -274,7 +270,6 @@ position: relative;
 #mainleft{
   width: 30%;
  height: 350px;
-  /* margin: auto;  */
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   text-align: center;
@@ -308,13 +303,7 @@ margin-top: 0px;
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(3,160px);
-/* padding-left: -1px; */
   gap: 40px;
-  /* margin: auto; */
-  /* margin-left: -27px; */
-
- 
-
 }
 #mainright>div>h2,#mainright>div>p{
   color: rgb(253, 246, 246);
@@ -375,16 +364,13 @@ margin-top: 0px;
   box-sizing: border-box;
 }
 
-
-
-
-
 #investment{
   width: 90%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* flex-wrap: wrap; */
   gap: 30px;
   margin: auto;
   margin-bottom: 60px;

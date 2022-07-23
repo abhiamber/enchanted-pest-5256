@@ -31,8 +31,6 @@
 #box2{
 display: flex;
 flex-wrap: wrap;
-
-
 }
 #box2>div{
     width: 22%;
@@ -127,6 +125,8 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8p
     justify-content: space-between;
     color: rgb(129, 126, 126);
     margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
   }
   #box6>div>p,#box6>div>h3{
     margin-top: 5px;
@@ -141,6 +141,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8p
     color:whitesmoke;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   footer>div{
     width: 18%;
