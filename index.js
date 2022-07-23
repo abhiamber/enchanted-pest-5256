@@ -240,8 +240,8 @@ function rightSliding() {
 }
 
 function display(start, last) {
-  document.querySelector("#destination").innerHTML = "";
-  // console.log("hello");
+  document.querySelector("#destination").innerHTML= "";
+  // console.log("hello");ss
   // let start=0
   // let last=4
   for (start; start <= last; start++) {
