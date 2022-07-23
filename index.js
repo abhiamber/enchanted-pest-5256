@@ -205,8 +205,10 @@ let topDestinations = [
   },
 ];
 
-document.querySelector("#left").addEventListener("click", leftSliding);
-document.querySelector("#right").addEventListener("click", rightSliding);
+let x=document.querySelector("#left")
+x && x.addEventListener("click", leftSliding);
+let y=document.querySelector("#right")
+y && y.addEventListener("click", rightSliding);
 // let count=0
 let start = 0;
 let last = 4;
@@ -217,6 +219,11 @@ function leftSliding() {
     start--;
     last--;
     display(start, last);
+  }else{
+    start=0
+    last=4
+    display(start, last);
+
   }
 }
 
@@ -234,7 +241,7 @@ function rightSliding() {
 
 function display(start, last) {
   document.querySelector("#destination").innerHTML = "";
-  console.log("hello");
+  // console.log("hello");
   // let start=0
   // let last=4
   for (start; start <= last; start++) {
@@ -285,6 +292,10 @@ function leftSlidingvac() {
     start2--;
     last2--;
     displayVacation(start2, last2);
+  }else{
+    start2=0
+    last2=4
+      displayVacation(start2, last2);
   }
 }
 
