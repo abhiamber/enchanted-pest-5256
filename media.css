@@ -1,0 +1,21 @@
+
+@media all and (min-Width:210px) and (max-Width:480px){
+    .box{
+   
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,250px);
+    gap: 40px;
+    
+    }
+
+}
+@media all and (min-Width:481px) and (max-Width:780px){
+    .box{
+   
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,290px);
+    gap: 20px;
+    
+    }
+
+}
