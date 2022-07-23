@@ -33,6 +33,9 @@
     justify-content: space-between;
     color: rgb(129, 126, 126);
     margin-bottom: 50px;
+    flex-wrap: wrap;
+  gap: 30px;
+ 
   }
   #box6>div>p,#box6>div>h3{
     margin-top: 5px;
@@ -47,6 +50,7 @@
     color:whitesmoke;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   footer>div{
     width: 18%;
